@@ -1,12 +1,16 @@
 ---
 theme: light-icons
 layout: intro
-# image: https://images.unsplash.com/photo-1606056041654-f203e0351229
+author: Prima Putra
 image: https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2
 title: Point of Sales (POS)
 # drawings:
 #   persist: false
 transition: slide-left
+fonts:
+  sans: 'Nunito'
+  mono: 'Fira Code'
+highlighter: shiki
 ---
 
 <div class="mb-4 absolute top-8 left-12">
@@ -24,19 +28,20 @@ Left for comment
 
 ---
 theme: light-icons
-layout: image-right
-equal: false
 transition: slide-left
+title: Introduction
+class: 'list-none'
+zoom: 1.5
 ---
 
-<div class="">
-  <span class="text-primary dark:text-primary text-4xl mb-8">Perkenalan</span>
-  <div>
-    <ul>
-      <li>I am <span class="font-bold text-lg">Prima Putra</span></li>
-      <li>Working as <span class="underline">Senior Software Developer</span> at <span class="font-bold">Solusi Sistem Informasi (SSI)</span></li>
-    </ul>
-  </div>
+# Introduction
+
+<div class="mt-8">
+  <ul class="list-none">
+    <li><solar-user-id-bold /> <span class="font-bold text-lg">Prima Putra W.</span></li>
+    <li><solar-buildings-bold /> <span class="underline">Senior Software Developer</span> at <span class="font-bold">Solusi Sistem Informasi (SSI)</span></li>
+    <li><ph-game-controller-fill /> Futsal, Gaming, Coding & Build Stuff</li>
+  </ul>
 </div>
 
 <!--
@@ -45,56 +50,62 @@ Here is another comment.
 
 ---
 transition: slide-up
+title: What To Do?
+layout: center
+zoom: 1.5
 ---
+
 # Apa yang akan kita buat?
 
 <!-- Another comment -->
 
 ---
+theme: light-icons
+layout: center
 transition: slide-up
-level: 2
+title: Point Of Sales
 ---
 
-# Instalasi ??
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-## Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+# Point Of Sales
+<!-- Put ending product image here -->
 
 ---
-layout: two-cols
-layoutClass: gap-16
+transition: slide-up
+clicks: 1
 ---
 
-# Table of contents
+# Topics
 
-You can use the `Toc` component to generate a table of contents for your slides:
+<div>
+  <ul class="list-none">
+    <li><span v-mark.box.orange><ph-users-bold /> User & Permission <span>(1<sup>st</sup> Day)</span></span></li>
+    <li><solar-box-bold /> Master Barang etc <span>(2<sup>nd</sup> Day)</span></li>
+    <li><ph-cash-register /> Point of Sales (Cashier) <span>(3<sup>rd</sup> Day)</span> </li>
+    <li><solar-notebook-bookmark-bold /> Reporting <span>(4<sup>th</sup> Day)</span></li>
+    <li><solar-card-linear /> Payment Gateway <span>(4<sup>th</sup> Day)</span> 🤔</li>
+  </ul>
+</div>
 
-```html
-<Toc minDepth="1" maxDepth="1"></Toc>
+---
+layout: center
+zoom: 1.4
+---
+
+# Installation
+
+```sh {1|2|3}
+$ composer create-project laravel/laravel pos
+$ cd pos
+$ php artisan serve
 ```
 
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
+---
+layout: center-image
+image: './images/ss1.png'
+---
 
-::right::
+# Tadaaa..
 
-<Toc v-click minDepth="1" maxDepth="2"></Toc>
 
 ---
 layout: image-right
