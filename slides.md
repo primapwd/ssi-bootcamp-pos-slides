@@ -4,6 +4,7 @@ layout: intro
 author: Prima Putra
 image: https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2
 title: Point of Sales (POS)
+hideInToc: true
 # drawings:
 #   persist: false
 transition: slide-left
@@ -32,6 +33,7 @@ transition: slide-left
 title: Introduction
 class: 'list-none'
 zoom: 1.5
+hideInToc: true
 ---
 
 # Introduction
@@ -53,6 +55,7 @@ transition: slide-up
 title: What To Do?
 layout: center
 zoom: 1.5
+hideInToc: true
 ---
 
 # What will we build?
@@ -64,6 +67,7 @@ theme: light-icons
 layout: center
 transition: slide-up
 title: Point Of Sales
+hideInToc: true
 ---
 
 # Point Of Sales
@@ -72,6 +76,7 @@ title: Point Of Sales
 ---
 transition: slide-up
 clicks: 1
+hideInToc: true
 ---
 
 # Topics
@@ -87,11 +92,20 @@ clicks: 1
 </div>
 
 ---
+title: Today's Activities
+hideInToc: true
+---
+
+# Today's Activities
+
+<Toc />
+
+---
 layout: center
 zoom: 1.4
 ---
 
-# Installation
+# Installation & Setup
 
 ```sh {1|2|3}
 $ composer create-project laravel/laravel pos
@@ -102,13 +116,31 @@ $ php artisan serve
 ---
 layout: center-image
 image: './images/ss1.png'
+hideInToc: true
 ---
 
 # Tadaaa..
 
 ---
+
+# Slicing Template & Layout
+
+---
+
+# Build Authentication Feature
+
+---
+
+# Build Users Management
+
+---
+
+# Build Permission Management
+
+---
 layout: center
 class: text-center
+hideInToc: true
 ---
 
 # 🙏🏻 Thank you! 😊
