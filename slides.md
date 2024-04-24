@@ -103,6 +103,7 @@ hideInToc: true
 ---
 layout: center
 zoom: 1.4
+title: Installation & Setup (30m)
 ---
 
 # Installation & Setup
@@ -119,20 +120,84 @@ image: './images/ss1.png'
 hideInToc: true
 ---
 
-# Tadaaa..
 
 ---
-
-# Slicing Template & Layout
-
+layout: two-cols
+layoutClass: gap-8
+title: Slicing Template & Login (30m)
 ---
 
-# Build Authentication Feature
+# Slicing Template & Login
 
+* <span v-mark.box.orange>Copy js, css & fonts</span>
+* <span v-mark.box.orange>Install Laravel Breeze</span>
+  * <span v-mark.box.orange> `composer require laravel/breeze --dev` </span>
+  * <span v-mark.box.orange> `php artisan breeze:install` </span>
+  * <span v-mark.box.orange> `php artisan db:seed` </span>
+* <span v-mark.box.orange> Copy & buat file layout </span>
+  * <span v-mark.box.orange> Ubah app.blade.php </span>
+  * <span v-mark.box.orange> Copy _navbar.blade.php </span>
+  * <span v-mark.box.orange> Copy _sidebar.blade.php </span>
+  * <span v-mark.box.orange> Ubah dashboard.blade.php </span>
+
+::right::
+
+<img src="/public/images/ss2.png" v-click class="rounded shadow" />
+
+---
+title: Build Users Management (40m)
 ---
 
 # Build Users Management
 
+* <span v-mark.box.orange>Buat Resource Route untuk User Management</span>
+  * <span v-mark.box.orange>`php artisan make:controller UsersController -rR --model=User`</span>
+* <span v-mark.box.orange>Tambahkan route ke web.php</span>
+  * <span v-mark.box.orange>`Route::resource('users', App\Http\Controllers\UsersController::class);`</span>
+
+---
+title: Build Users Management #2 (40m)
+hideInToc: true
+---
+
+# Build Users Management
+
+```sh
+routes/web.php
+```
+
+````md magic-move
+```php
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+```
+```php {6|*}
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::resource('users', App\Http\Controllers\UsersController::class);
+});
+```
+````
+
+
+---
+title: Build Users Management #3 (40m)
+hideInToc: true
+---
+
+# Build Users Management
+
+* <span v-mark.box.orange>Ubah link di sidebar</span>
+* <span v-mark.box.orange>Buat file blade untuk index, tambah & edit</span>
+
+---
+title: Build Permission Management (40m)
 ---
 
 # Build Permission Management
