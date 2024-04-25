@@ -34,6 +34,7 @@ title: Introduction
 class: 'list-none'
 zoom: 1.5
 hideInToc: true
+hide: true
 ---
 
 # Introduction
@@ -68,10 +69,22 @@ layout: center
 transition: slide-up
 title: Point Of Sales
 hideInToc: true
+zoom: 1.5
 ---
 
 # Point Of Sales
 <!-- Put ending product image here -->
+
+---
+hideInToc: true
+layout: center
+class: text-right
+zoom: 1.2
+---
+
+> Wisdom is not a product of schooling but of the lifelong attempt to acquire it.
+
+> <ins>Albert Einstein</ins>
 
 ---
 transition: slide-up
@@ -103,7 +116,7 @@ hideInToc: true
 ---
 layout: center
 zoom: 1.4
-title: Installation & Setup (30m)
+title: Installation & Setup (30min)
 ---
 
 # Installation & Setup
@@ -124,7 +137,7 @@ hideInToc: true
 ---
 layout: two-cols
 layoutClass: gap-8
-title: Slicing Template & Login (30m)
+title: Slicing Template & Login (30min)
 ---
 
 # Slicing Template & Login
@@ -145,7 +158,7 @@ title: Slicing Template & Login (30m)
 <img src="/public/images/ss2.png" v-click class="rounded shadow" />
 
 ---
-title: Build Users Management (40m)
+title: Build Users Management (40min)
 ---
 
 # Build Users Management
@@ -156,7 +169,7 @@ title: Build Users Management (40m)
   * <span v-mark.box.orange>`Route::resource('users', App\Http\Controllers\UsersController::class);`</span>
 
 ---
-title: Build Users Management #2 (40m)
+title: Build Users Management #2 (40min)
 hideInToc: true
 ---
 
@@ -187,7 +200,7 @@ Route::middleware('auth')->group(function () {
 
 
 ---
-title: Build Users Management #3 (40m)
+title: Build Users Management #3 (40min)
 hideInToc: true
 ---
 
@@ -197,10 +210,18 @@ hideInToc: true
 * <span v-mark.box.orange>Buat file blade untuk index, tambah & edit</span>
 
 ---
-title: Build Permission Management (40m)
+title: Build Permission Management (40min)
 ---
 
 # Build Permission Management
+
+---
+layout: center
+class: text-center
+hideInToc: true
+---
+
+# QA Session 🙋‍♂️
 
 ---
 layout: center
